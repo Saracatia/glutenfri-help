@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Glutenfri førstehjælp - forstå gluten på 5 minutter, find trygge fødevarer og få klare svar i hverdagen.">
+  <meta name="keywords" content="glutenfri,cøliaki,glutenintolerance,glutenfri opskrifter,glutenfri kost">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Glutenfri førstehjælp</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="Logo.png" type="image/svg+xml">
+  <link rel="alternate icon" href="Logo.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#F5F3EE">
+
+  <!-- Din CSS (ligger ved siden af index.html) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Spring til indhold</a>
+
+    <!-- Header -->
+  <header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Glutenfri førstehjælp - forside">
+      <img src="billeder/Logo.png" alt="Glutenfri førstehjælp" width="36" height="36">
+    </a>
+
+    <button class="nav-toggle" aria-controls="nav" aria-expanded="false">
+      <span class="sr-only">Åbn menu</span>☰
+    </button>
+
+    <nav id="nav" class="site-nav" aria-label="Primær navigation">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="hvad-er-gluten.html">Hvad er gluten</a></li>
+        <li><a href="opskrifter.html">Opskrifter</a></li>
+        <li><a href="tryg.html">Tryg-listen</a></li>
+        <li><a href="ordbog.html">Ordbog</a></li>
+        <li><a href="$fagpersoner.html">Fagpersoner</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main id="main">
+        <!-- HERO -->
+        <section class="hero hero--sub">
+            <div class="container hero-narrow">
+                <h1>Opskrifter</h1>
+                <p class="lede">
+                    Lækre og nemme glutenfri opskrifter til alle måltider.
+                </p>
+            </div>
+        </section>
+
+        <!-- Opskrifter indhold her -->
+    </main>
+     <!-- Features -->
+  <div class="features-wrap">
+    <div class="container features-row">
+      <div class="feature"><div class="feature-text"><strong>Hurtige svar A-Å</strong><span>Ingredienser, mærkninger, faldgruber</span></div></div>
+      <div class="feature"><div class="feature-text"><strong>Opskrifter på 15 min.</strong><span>Få ingredienser · familievenligt</span></div></div>
+      <div class="feature"><div class="feature-text"><strong>Kilder du kan stole på</strong><span>Myndigheder & patientforeninger</span></div></div>
+    </div>
+  </div>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <p><small>© <span id="year"></span> Glutenfri førstehjælp.</small></p>
+    <nav aria-label="Sidefod">
+      <a href="tryg.html">Tryg-liste</a>
+      <a href="ordbog.html">A-Å</a>
+      <a href="#main" class="back-to-top">Til toppen ↑</a>
+    </nav>
+  </div>
+    </footer>
+
+  
+<script>
+    // menu + årstal //
+(function(){
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('nav');
+
+  if (navToggle && nav){
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+
+
+</body>
+</html>
